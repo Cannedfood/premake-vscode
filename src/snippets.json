@@ -13,21 +13,21 @@
 	"project": {
 		"prefix": "project",
 		"body": [
-			"\tproject '${0:WORKSPACE_NAME}'",
-			"\t\tkind '${1|ConsoleApp,WindowedApp,SharedLib,StaticLib,Makefile,Utility,None,AndroidProj|}'"
+			"\tproject '${1:$WORKSPACE_NAME}'",
+			"\t\tkind '${2|ConsoleApp,WindowedApp,SharedLib,StaticLib,Makefile,Utility,None,AndroidProj|}'"
 		]
 	},
 	"newoption": {
 		"prefix": "newoption",
 		"body": [
 			"newoption {",
-			"\ttrigger     = '${0:my-flag}'",
-			"\tdescription = '${1}'",
-			"\tvalue       = '${2:42}'",
+			"\ttrigger     = '${1:my-flag}'",
+			"\tdescription = '${2}'",
+			"\tvalue       = '${3:42}'",
 			"\tallowed     = '{",
-			"\t\t'${3:value}' = '${4:description}'",
+			"\t\t'${4:value}' = '${5:description}'",
 			"\t}'",
-			"\tdefault     = '${5}'",
+			"\tdefault     = '${6}'",
 			"}"
 		]
 	}
