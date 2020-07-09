@@ -1,0 +1,34 @@
+{
+	"workspace": {
+		"prefix": "workspace",
+		"body": "workspace '${WORKSPACE_NAME}'\n\n"
+	},
+	"language (C++)": {
+		"prefix": "languagec++",
+		"body": [
+			"language 'C++'",
+			"cppdialect '${1|C++Latest,C++20,C++17,C++14,C++11,C++98,Default,gnu++98,gnu++11,gnu++14,gnu++17|}'"
+		]
+	},
+	"project": {
+		"prefix": "project",
+		"body": [
+			"\tproject '${0:WORKSPACE_NAME}'",
+			"\t\tkind '${1|ConsoleApp,WindowedApp,SharedLib,StaticLib,Makefile,Utility,None,AndroidProj|}'"
+		]
+	},
+	"newoption": {
+		"prefix": "newoption",
+		"body": [
+			"newoption {",
+			"\ttrigger     = '${0:my-flag}'",
+			"\tdescription = '${1}'",
+			"\tvalue       = '${2:42}'",
+			"\tallowed     = '{",
+			"\t\t'${3:value}' = '${4:description}'",
+			"\t}'",
+			"\tdefault     = '${5}'",
+			"}"
+		]
+	}
+}
